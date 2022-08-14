@@ -1,6 +1,6 @@
 import { latLng } from "leaflet";
 import { MapContainer, TileLayer } from "react-leaflet";
-import { MapProps } from "../interface/MapInterface";
+import { MapProps } from "../Interfaces";
 
 const Map = (props: MapProps) => {
 	const mapCenter = latLng(43.68, -79.38);
