@@ -1,8 +1,8 @@
 {
     "mapPoints": [
-        {"name": "Point1", "latitude": 43.68, "longitude": -79.31},
-        {"name": "Point2", "latitude": 43.69, "longitude": -79.33},
-        {"name": "Point3", "latitude": 43.73, "longitude": -79.34},
-        {"name": "Point4", "latitude": 43.62, "longitude": -79.38}
+        {"id": 1, "name": "Point1", "latitude": 43.68, "longitude": -79.31},
+        {"id": 2, "name": "Point2", "latitude": 43.69, "longitude": -79.33},
+        {"id": 3, "name": "Point3", "latitude": 43.73, "longitude": -79.34},
+        {"id": 4, "name": "Point4", "latitude": 43.62, "longitude": -79.38}
     ]
 }
