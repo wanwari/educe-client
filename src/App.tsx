@@ -1,21 +1,13 @@
-import { useEffect, useState } from "react";
-import Map from "./components/Map";
-import Points from "./components/Points";
-import data from "./tmpData.json";
+import { Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
-	const [points, setPoints] = useState<any>();
-
-	useEffect(() => {
-		setPoints(data);
-	}, []);
-
 	return (
-		<div>
-			<Map>
-				<Points coordinates={points} />
-			</Map>
-		</div>
+		<Routes>
+			<Route path="/" element={<Index />} />
+			<Route path="*" element={<NotFound />} />
+		</Routes>
 	);
 };
 
