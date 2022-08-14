@@ -1,4 +1,5 @@
 import { Marker } from "react-leaflet";
+import ToolTip from "./Tooltip/Tooltip";
 
 const Points = (props: any) => {
 	return (
@@ -9,7 +10,9 @@ const Points = (props: any) => {
 						<Marker
 							key={point.id}
 							position={[point.latitude, point.longitude]}
-						/>
+						>
+							<ToolTip data={point} />
+						</Marker>
 					);
 				})}
 		</div>
