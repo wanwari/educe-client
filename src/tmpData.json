@@ -2,16 +2,53 @@
     "mapPoints": [
         {
             "id": 1, 
-            "name": "Young & Dundas Intersection", 
-            "intersectionOne": "young", 
-            "intersectionTwo": "dundas", 
+            "name": "Yonge & Gerrard Intersection", 
+            "intersectionOne": "Yonge St", 
+            "intersectionTwo": "Gerrard St", 
             "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70" , 
             "imageTwo": "https://images.unsplash.com/photo-1437809781432-a957377661ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=7", 
-            "latitude": 43.68, 
-            "longitude": -79.31
+            "latitude": 43.65907103922052,
+            "longitude": -79.38207601626382
         },
-        {"id": 2, "name": "Point2", "latitude": 43.69, "longitude": -79.33},
-        {"id": 3, "name": "Point3", "latitude": 43.73, "longitude": -79.34},
-        {"id": 4, "name": "Point4", "latitude": 43.62, "longitude": -79.38}
+        {
+            "id": 2, 
+            "name": "Coxwell & Dundas Intersection", 
+            "intersectionOne": "Coxwell Ave", 
+            "intersectionTwo": "Dundas St E", 
+            "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70" , 
+            "imageTwo": "https://images.unsplash.com/photo-1437809781432-a957377661ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=7", 
+            "latitude": 43.66870170437707, 
+            "longitude": -79.31752970662542
+        },
+        {
+            "id": 3, 
+            "name": "Monarch Park", 
+            "intersectionOne": "Felstead Ave", 
+            "intersectionTwo": "Gillard Ave", 
+            "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70" , 
+            "imageTwo": "https://images.unsplash.com/photo-1437809781432-a957377661ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=7", 
+            "latitude": 43.677897016483456, 
+            "longitude": -79.3257294916126
+        },
+        {
+            "id": 4, 
+            "name": "John's House", 
+            "intersectionOne": "Avenue Rd", 
+            "intersectionTwo": "Farnham Ave", 
+            "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70" , 
+            "imageTwo": "https://images.unsplash.com/photo-1437809781432-a957377661ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=7", 
+            "latitude": 43.68384673285826, 
+            "longitude": -79.39942135298928
+        },
+        {
+            "id": 5, 
+            "name": "Court Building", 
+            "intersectionOne": "Bathurst St", 
+            "intersectionTwo": "Dundas St W", 
+            "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70" , 
+            "imageTwo": "https://images.unsplash.com/photo-1437809781432-a957377661ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=7", 
+            "latitude": 43.65233119990964, 
+            "longitude": -79.4060117823641
+        }
     ]
 }
