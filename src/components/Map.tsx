@@ -1,14 +1,14 @@
-import { latLng } from "leaflet";
 import { MapContainer, TileLayer } from "react-leaflet";
 
 const Map = (props: any) => {
-	const mapCenter = latLng(43.68, -79.38);
+	//const mapCenter = latLng(43.68, -79.38);
 
+	console.log(props.center);
 	return (
 		<div>
 			<MapContainer
 				className="w-screen h-screen relative z-0"
-				center={mapCenter}
+				center={props.center}
 				zoom={12}
 				scrollWheelZoom={true}
 			>
@@ -18,9 +18,6 @@ const Map = (props: any) => {
 				/>
 				{props.children}
 			</MapContainer>
-			<div className="absolute z-10 top-0 right-0 mr-10 mt-10 bg-white p-20 rounded-xl">
-				Test
-			</div>
 		</div>
 	);
 };

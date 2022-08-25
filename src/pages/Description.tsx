@@ -9,9 +9,9 @@ const Description = () => {
 	return (
 		<div className="flex flex-col">
 			<h1>Description</h1>
-			<div className="flex flex-row justify-center">
+			<div className="flex flex-row justify-center rounded">
 				<ReactCompareSlider
-					className="w-1/2 h-1/2"
+					className="w-1/2 h-1/2 rounded-lg"
 					itemOne={
 						<ReactCompareSliderImage src={img1} alt="Image one" />
 					}
@@ -19,19 +19,6 @@ const Description = () => {
 						<ReactCompareSliderImage src={img2} alt="Image two" />
 					}
 				/>
-			</div>
-			<div className="flex flex-row justify-center">
-				<table className="table-auto">
-					<tbody>
-						<tr>
-							<td className="border">Test</td>
-							<td className="border">Test</td>
-						</tr>
-						<tr>
-							<td className="border">Test</td>
-						</tr>
-					</tbody>
-				</table>
 			</div>
 		</div>
 	);
