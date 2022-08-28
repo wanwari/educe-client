@@ -1,9 +1,6 @@
 import { MapContainer, TileLayer } from "react-leaflet";
 
 const Map = (props: any) => {
-	//const mapCenter = latLng(43.68, -79.38);
-
-	console.log(props.center);
 	return (
 		<div>
 			<MapContainer
