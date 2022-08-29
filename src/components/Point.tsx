@@ -1,7 +1,6 @@
-import { latLng } from "leaflet";
 import { Marker } from "react-leaflet";
 import { useDispatch } from "react-redux";
-import { setPoint } from "../state/slices/clickedPointSlice";
+import { setActivePoint } from "../state/slices/activePointSlice";
 
 const Point = (props: any) => {
 	const dispatch = useDispatch();
@@ -12,10 +11,7 @@ const Point = (props: any) => {
 			position={[props.point.latitude, props.point.longitude]}
 			eventHandlers={{
 				click: (e) => {
-					props.clicked(
-						latLng(props.point.latitude, props.point.longitude)
-					);
-					dispatch(setPoint(props.point));
+					dispatch(setActivePoint({ ...props.point }));
 				},
 			}}
 		></Marker>

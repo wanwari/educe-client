@@ -1,28 +1,26 @@
-import { latLng, LatLng } from "leaflet";
-import { useState } from "react";
-import { useMap } from "react-leaflet";
+import { latLng } from "leaflet";
+import { useSelector } from "react-redux";
+import { RootState } from "../state/slices/store";
 import MapPanner from "./MapPanner";
 import Point from "./Point";
 
 const Points = (props: any) => {
-	const [newLocation, setNewLocation] = useState(latLng([43.68, -79.38]));
-
-	const clicked = (location: LatLng) => {
-		setNewLocation(location);
-	};
+	const activePoint = useSelector((state: RootState) => state.activePoint);
 
 	return (
 		<div>
 			{props.coordinates &&
 				props.coordinates.mapPoints.map((point: any) => {
 					return (
-						<>
-							<MapPanner center={newLocation} />
-							<Point
-								point={point}
-								clicked={(lat: any) => clicked(lat)}
+						<div key={point.id}>
+							<MapPanner
+								center={latLng([
+									activePoint.latitude,
+									activePoint.longitude,
+								])}
 							/>
-						</>
+							<Point point={point} />
+						</div>
 					);
 				})}
 		</div>

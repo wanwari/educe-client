@@ -20,7 +20,6 @@ const MainPage = () => {
 		});
 		lat = lat / data.mapPoints.length;
 		long = long / data.mapPoints.length;
-		console.log(lat, long);
 		setMapCenter(latLng([lat, long]));
 	}, []);
 
