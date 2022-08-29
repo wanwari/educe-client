@@ -1,13 +1,13 @@
 import { latLng } from "leaflet";
 import { useEffect, useState } from "react";
+import { PointArrayInterface } from "../Interfaces";
 import Map from "../components/Map";
 import MapPanner from "../components/MapPanner";
 import Points from "../components/Points";
-import { PointInterface } from "../Interfaces";
 import data from "../tmpData.json";
 
 const MainPage = () => {
-	const [points, setPoints] = useState<PointInterface>();
+	const [points, setPoints] = useState<PointArrayInterface>();
 	const [mapCenter, setMapCenter] = useState(latLng([0, 0]));
 
 	useEffect(() => {
