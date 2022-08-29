@@ -1,6 +1,7 @@
 import { Marker } from "react-leaflet";
 import { useDispatch } from "react-redux";
 import { setActivePoint } from "../state/slices/activePointSlice";
+import { setShowTooltip } from "../state/slices/showTooltipSlice";
 
 const Point = (props: any) => {
 	const dispatch = useDispatch();
@@ -12,6 +13,7 @@ const Point = (props: any) => {
 			eventHandlers={{
 				click: (e) => {
 					dispatch(setActivePoint({ ...props.point }));
+					dispatch(setShowTooltip({ value: true }));
 				},
 			}}
 		></Marker>
