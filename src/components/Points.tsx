@@ -18,6 +18,7 @@ const Points = (props: any) => {
 									activePoint.latitude,
 									activePoint.longitude,
 								])}
+								initial={false}
 							/>
 							<Point point={point} />
 						</div>
