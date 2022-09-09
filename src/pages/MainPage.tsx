@@ -27,7 +27,7 @@ const MainPage = () => {
 		<div>
 			<Map data={data} center={mapCenter}>
 				<Points coordinates={points} />
-				<MapPanner center={mapCenter} />
+				<MapPanner center={mapCenter} initial={true} />
 			</Map>
 		</div>
 	);
