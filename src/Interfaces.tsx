@@ -17,7 +17,10 @@ export interface PointInterface {
 	intersectionOne: string;
 	intersectionTwo: string;
 	imageOne: string;
+	imageOneDate: Date;
 	imageTwo: string;
+	imageTwoDate: Date;
+	description?: string;
 	latitude: number;
 	longitude: number;
 }

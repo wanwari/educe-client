@@ -8,7 +8,9 @@ const initialState: PointInterface = {
 	intersectionOne: "",
 	intersectionTwo: "",
 	imageOne: "",
+	imageOneDate: new Date(),
 	imageTwo: "",
+	imageTwoDate: new Date(),
 	latitude: 0,
 	longitude: 0,
 };
@@ -23,7 +25,10 @@ export const activePointSlice = createSlice({
 			state.intersectionOne = action.payload.intersectionOne;
 			state.intersectionTwo = action.payload.intersectionTwo;
 			state.imageOne = action.payload.imageOne;
+			state.imageOneDate = action.payload.imageOneDate;
 			state.imageTwo = action.payload.imageTwo;
+			state.imageTwoDate = action.payload.imageTwoDate;
+			state.description = action.payload.description;
 			state.latitude = action.payload.latitude;
 			state.longitude = action.payload.longitude;
 		},

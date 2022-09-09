@@ -6,7 +6,10 @@
             "intersectionOne": "Yonge St", 
             "intersectionTwo": "Gerrard St", 
             "imageOne": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fduncan.co%2Fwp-content%2Fuploads%2F2014%2F07%2FDuncan-Rawlinson-Photo-100473-OLG-Canada-Day-Eve-Fireworks-Toronto-Ontario-Canada-20140630-IMG_7823-Toronto-Skyline-At-Night.jpg&f=1&nofb=1" , 
+            "imageOneDate": "2002-12-12",
             "imageTwo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.VH-fnp5eAg19ZzIzt7nxhgHaE8%26pid%3DApi&f=1", 
+            "imageTwoDate": "2020-12-01",
+            "description": "A short description about the image if there is one, not all of them will have one.",
             "latitude": 43.65907103922052,
             "longitude": -79.38207601626382
         },
@@ -15,8 +18,10 @@
             "name": "Coxwell & Dundas Intersection", 
             "intersectionOne": "Coxwell Ave", 
             "intersectionTwo": "Dundas St E", 
-            "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70" , 
+            "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70d" , 
+            "imageOneDate": "2002-01-01",
             "imageTwo": "https://images.unsplash.com/photo-1437809781432-a957377661ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=7", 
+            "imageTwoDate": "2020-12-01",
             "latitude": 43.66870170437707, 
             "longitude": -79.31752970662542
         },
@@ -26,7 +31,9 @@
             "intersectionOne": "Felstead Ave", 
             "intersectionTwo": "Gillard Ave", 
             "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70" , 
+            "imageOneDate": "2002-01-01",
             "imageTwo": "https://images.unsplash.com/photo-1437809781432-a957377661ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=7", 
+            "imageTwoDate": "2020-12-01",
             "latitude": 43.677897016483456, 
             "longitude": -79.3257294916126
         },
@@ -36,7 +43,9 @@
             "intersectionOne": "Avenue Rd", 
             "intersectionTwo": "Farnham Ave", 
             "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70" , 
+            "imageOneDate": "2002-01-01",
             "imageTwo": "https://images.unsplash.com/photo-1437809781432-a957377661ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=7", 
+            "imageTwoDate": "2020-12-01",
             "latitude": 43.68384673285826, 
             "longitude": -79.39942135298928
         },
@@ -46,7 +55,9 @@
             "intersectionOne": "Bathurst St", 
             "intersectionTwo": "Dundas St W", 
             "imageOne": "https://images.unsplash.com/photo-1438401171849-74ac270044ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=70" , 
+            "imageOneDate": "2002-01-01",
             "imageTwo": "https://images.unsplash.com/photo-1437809781432-a957377661ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1784&q=7", 
+            "imageTwoDate": "2020-12-01",
             "latitude": 43.65233119990964, 
             "longitude": -79.4060117823641
         }
