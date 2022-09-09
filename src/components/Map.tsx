@@ -15,12 +15,13 @@ const Map = (props: any) => {
 			<MapContainer
 				className="w-screen h-screen relative z-0"
 				center={props.center}
-				zoom={12}
+				zoom={13}
 				scrollWheelZoom={true}
 			>
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					//url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
 				/>
 				{props.children}
 			</MapContainer>
