@@ -21,11 +21,14 @@ const MainPage = () => {
 		lat = lat / data.mapPoints.length;
 		long = long / data.mapPoints.length;
 		setMapCenter(latLng([lat, long]));
+
+		const x = JSON.parse(JSON.stringify(data));
+		//dispatch(setData(x));
 	}, []);
 
 	return (
 		<div>
-			<Map data={data} center={mapCenter}>
+			<Map center={mapCenter}>
 				<Points coordinates={points} />
 				<MapPanner center={mapCenter} initial={true} />
 			</Map>

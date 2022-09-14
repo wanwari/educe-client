@@ -1,28 +1,24 @@
+import { useAtom } from "jotai";
 import {
 	ReactCompareSlider,
 	ReactCompareSliderImage,
 } from "react-compare-slider";
-import { useDispatch, useSelector } from "react-redux";
-import { setShowTooltip } from "../state/slices/showTooltipSlice";
-import { RootState } from "../state/slices/store";
 import { AiOutlineClose } from "react-icons/ai";
+import { showTooltip } from "../state/store";
 
 const ToolTip = (props: any) => {
-	const showTooltip = useSelector((state: RootState) => state.showTooltip);
-	const dispatch = useDispatch();
+	const [show, setShow] = useAtom(showTooltip);
 
 	return (
 		<div>
-			{showTooltip.value && (
+			{show && (
 				<div className="absolute bottom-10 left-5 right-5  md:bottom-auto md:left-auto md:top-10 md:right-10 md:w-3/6 lg:w-2/6 bg-white rounded-lg shadow-2xl px-2 py-0">
 					<div className="flex flex-row py-2 justify-between">
-						<a href="/" className="text-blue-500">
-							Learn More
-						</a>
+						Learn More
 						<button
-							onClick={() =>
-								dispatch(setShowTooltip({ value: false }))
-							}
+							onClick={() => {
+								setShow(false);
+							}}
 						>
 							<AiOutlineClose />
 						</button>

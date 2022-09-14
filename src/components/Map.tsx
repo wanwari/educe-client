@@ -1,14 +1,10 @@
+import { useAtom } from "jotai";
 import { MapContainer, TileLayer } from "react-leaflet";
-import { useSelector } from "react-redux";
-import { RootState } from "../state/slices/store";
+import { activePoint } from "../state/store";
 import ToolTip from "./Tooltip";
 
 const Map = (props: any) => {
-	const activePoint = useSelector((state: RootState) => state.activePoint);
-
-	if (activePoint.id !== 0) {
-		console.log("Active");
-	}
+	const [aPoint] = useAtom(activePoint);
 
 	return (
 		<div>
@@ -25,7 +21,7 @@ const Map = (props: any) => {
 				/>
 				{props.children}
 			</MapContainer>
-			{activePoint.id !== 0 && <ToolTip data={activePoint} />}
+			{aPoint !== null && <ToolTip data={aPoint} />}
 		</div>
 	);
 };

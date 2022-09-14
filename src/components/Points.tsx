@@ -1,12 +1,8 @@
 import { latLng } from "leaflet";
-import { useSelector } from "react-redux";
-import { RootState } from "../state/slices/store";
 import MapPanner from "./MapPanner";
 import Point from "./Point";
 
 const Points = (props: any) => {
-	const activePoint = useSelector((state: RootState) => state.activePoint);
-
 	return (
 		<div>
 			{props.coordinates &&
@@ -14,10 +10,7 @@ const Points = (props: any) => {
 					return (
 						<div key={point.id}>
 							<MapPanner
-								center={latLng([
-									activePoint.latitude,
-									activePoint.longitude,
-								])}
+								center={latLng([0, 0])}
 								initial={false}
 							/>
 							<Point point={point} />

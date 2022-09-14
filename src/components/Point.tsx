@@ -1,12 +1,12 @@
 import { Marker } from "react-leaflet";
-import { useDispatch } from "react-redux";
-import { setActivePoint } from "../state/slices/activePointSlice";
-import { setShowTooltip } from "../state/slices/showTooltipSlice";
 import { icon } from "leaflet";
 import point from "../img/b.png";
+import { useAtom } from "jotai";
+import { activePoint, showTooltip } from "../state/store";
 
 const Point = (props: any) => {
-	const dispatch = useDispatch();
+	const [show, setShow] = useAtom(showTooltip);
+	const [aPoint, setAPoint] = useAtom(activePoint);
 
 	const customIcon = icon({
 		iconUrl: point,
@@ -20,8 +20,8 @@ const Point = (props: any) => {
 			icon={customIcon}
 			eventHandlers={{
 				click: (e) => {
-					dispatch(setActivePoint({ ...props.point }));
-					dispatch(setShowTooltip({ value: true }));
+					setAPoint(props.point);
+					setShow(true);
 				},
 			}}
 		></Marker>

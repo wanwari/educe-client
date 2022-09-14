@@ -8,7 +8,6 @@ import img2 from "../img/t2.jpeg";
 const Description = () => {
 	return (
 		<div className="flex flex-col">
-			<h1>Description</h1>
 			<div className="flex flex-row justify-center rounded">
 				<ReactCompareSlider
 					className="w-1/2 h-1/2 rounded-lg"
