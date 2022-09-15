@@ -1,6 +1,7 @@
 import { useAtom } from "jotai";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { activePoint } from "../state/store";
+import { MapClicked } from "./MapControls";
 import ToolTip from "./Tooltip";
 
 const Map = (props: any) => {
@@ -14,6 +15,7 @@ const Map = (props: any) => {
 				zoom={13}
 				scrollWheelZoom={true}
 			>
+				<MapClicked />
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 					//url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

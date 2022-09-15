@@ -1,5 +1,5 @@
 import { latLng } from "leaflet";
-import MapPanner from "./MapPanner";
+import { MapPanner } from "./MapControls";
 import Point from "./Point";
 
 const Points = (props: any) => {

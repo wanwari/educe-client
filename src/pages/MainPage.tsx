@@ -2,7 +2,7 @@ import { latLng } from "leaflet";
 import { useEffect, useState } from "react";
 import { PointArrayInterface } from "../Interfaces";
 import Map from "../components/Map";
-import MapPanner from "../components/MapPanner";
+import { MapPanner } from "../components/MapControls";
 import Points from "../components/Points";
 import data from "../tmpData.json";
 
