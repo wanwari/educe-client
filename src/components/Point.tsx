@@ -3,8 +3,9 @@ import { icon } from "leaflet";
 import point from "../img/b.png";
 import { useAtom } from "jotai";
 import { activePoint, showTooltip } from "../state/store";
+import { PointInterface } from "../Interfaces";
 
-const Point = (props: any) => {
+const Point = (props: { point: PointInterface }) => {
 	const [show, setShow] = useAtom(showTooltip);
 	const [aPoint, setAPoint] = useAtom(activePoint);
 

@@ -4,9 +4,10 @@ import {
 	ReactCompareSliderImage,
 } from "react-compare-slider";
 import { AiOutlineClose } from "react-icons/ai";
+import { PointInterface } from "../Interfaces";
 import { showTooltip } from "../state/store";
 
-const ToolTip = (props: any) => {
+const ToolTip = (props: { data: PointInterface }) => {
 	const [show, setShow] = useAtom(showTooltip);
 
 	return (

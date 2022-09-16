@@ -1,10 +1,16 @@
 import { useAtom } from "jotai";
+import { LatLng } from "leaflet";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { activePoint } from "../state/store";
 import { MapClicked } from "./MapControls";
 import ToolTip from "./Tooltip";
 
-const Map = (props: any) => {
+interface MapProps {
+	center: LatLng;
+	children: React.ReactNode;
+}
+
+const Map = (props: MapProps) => {
 	const [aPoint] = useAtom(activePoint);
 
 	return (

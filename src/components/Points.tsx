@@ -1,12 +1,13 @@
 import { latLng } from "leaflet";
+import { PointArrayInterface } from "../Interfaces";
 import { MapPanner } from "./MapControls";
 import Point from "./Point";
 
-const Points = (props: any) => {
+const Points = (props: { coordinates: PointArrayInterface }) => {
 	return (
 		<div>
-			{props.coordinates &&
-				props.coordinates.mapPoints.map((point: any) => {
+			{props.coordinates.mapPoints &&
+				props.coordinates.mapPoints.map((point) => {
 					return (
 						<div key={point.id}>
 							<MapPanner
