@@ -6,8 +6,8 @@ import { activePoint, showTooltip } from "../state/store";
 import { PointInterface } from "../Interfaces";
 
 const Point = (props: { point: PointInterface }) => {
-	const [show, setShow] = useAtom(showTooltip);
-	const [aPoint, setAPoint] = useAtom(activePoint);
+	const [, setShow] = useAtom(showTooltip);
+	const [, setAPoint] = useAtom(activePoint);
 
 	const customIcon = icon({
 		iconUrl: point,

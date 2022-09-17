@@ -17,7 +17,7 @@ export const MapPanner = (props: PannerProps) => {
 };
 
 export const MapClicked = () => {
-	const [show, setShow] = useAtom(showTooltip);
+	const [, setShow] = useAtom(showTooltip);
 
 	useMapEvent("click", () => {
 		setShow(false);
