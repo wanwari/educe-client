@@ -13,7 +13,7 @@ const ToolTip = (props: { data: PointInterface }) => {
 	return (
 		<div>
 			{show && (
-				<div className="absolute bottom-10 left-5 right-5  md:bottom-auto md:left-auto md:top-10 md:right-10 md:w-3/6 lg:w-2/6 bg-white rounded-lg shadow-2xl px-2 py-0">
+				<div className="absolute bottom-10 left-5 right-5 bg-sky-100 md:bottom-auto md:left-auto md:top-10 md:right-10 md:w-3/6 lg:w-2/6 rounded-2xl text-stone-700 shadow-2xl px-4 py-2">
 					<div className="flex flex-row py-2 justify-between">
 						Learn More
 						<button
@@ -44,12 +44,14 @@ const ToolTip = (props: { data: PointInterface }) => {
 						<p>{props.data.imageOneDate}</p>
 						<p>{props.data.imageTwoDate}</p>
 					</div>
-					<h1 className="py-2 text-lg font-bold text-center text-blue-600">
+					<h1 className="py-2 text-lg font-bold text-center text-black">
 						{props.data.name}
 					</h1>
-					<h1 className="hidden md:block px-12 pb-4">
-						{props.data.description}
-					</h1>
+					{props.data.description && (
+						<h1 className="hidden md:block px-12 pb-4">
+							{props.data.description}
+						</h1>
+					)}
 				</div>
 			)}
 		</div>
