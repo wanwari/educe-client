@@ -1,12 +1,12 @@
 import { useAtom } from "jotai";
 import { latLng } from "leaflet";
 import { PointArrayInterface } from "../Interfaces";
-import { activePoint } from "../state/store";
+import { activePointState } from "../state/store";
 import { MapPanner } from "./MapControls";
 import Point from "./Point";
 
 const Points = (props: { coordinates: PointArrayInterface }) => {
-	const [aPoint] = useAtom(activePoint);
+	const [activePoint] = useAtom(activePointState);
 
 	return (
 		<div>
@@ -14,11 +14,11 @@ const Points = (props: { coordinates: PointArrayInterface }) => {
 				props.coordinates.mapPoints.map((point) => {
 					return (
 						<div key={point.id}>
-							{aPoint && (
+							{activePoint && (
 								<MapPanner
 									center={latLng([
-										aPoint!.latitude,
-										aPoint!.longitude,
+										activePoint!.latitude,
+										activePoint!.longitude,
 									])}
 									initial={false}
 								/>

@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import { LatLng } from "leaflet";
 import { MapContainer, TileLayer } from "react-leaflet";
-import { activePoint } from "../state/store";
+import { activePointState } from "../state/store";
 import { MapClicked } from "./MapControls";
 import ToolTip from "./Tooltip";
 
@@ -11,7 +11,7 @@ interface MapProps {
 }
 
 const Map = (props: MapProps) => {
-	const [aPoint] = useAtom(activePoint);
+	const [activePoint] = useAtom(activePointState);
 
 	return (
 		<div>
@@ -29,7 +29,7 @@ const Map = (props: MapProps) => {
 				/>
 				{props.children}
 			</MapContainer>
-			{aPoint !== null && <ToolTip data={aPoint} />}
+			{activePoint !== null && <ToolTip data={activePoint} />}
 		</div>
 	);
 };
