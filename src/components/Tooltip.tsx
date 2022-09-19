@@ -4,11 +4,13 @@ import {
 	ReactCompareSliderImage,
 } from "react-compare-slider";
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import { PointInterface } from "../Interfaces";
-import { showTooltipState } from "../state/store";
+import { activePointState, showTooltipState } from "../state/store";
 
 const ToolTip = (props: { data: PointInterface }) => {
 	const [showTooltip, setShowTooltip] = useAtom(showTooltipState);
+	const [, setActivePoint] = useAtom(activePointState);
 
 	return (
 		<div>
@@ -19,6 +21,7 @@ const ToolTip = (props: { data: PointInterface }) => {
 						<button
 							onClick={() => {
 								setShowTooltip(false);
+								setActivePoint(null);
 							}}
 						>
 							<AiOutlineClose />
@@ -52,9 +55,16 @@ const ToolTip = (props: { data: PointInterface }) => {
 								{props.data.description}
 							</p>
 						)}
-						<button className="text-white border-2 rounded-md px-8 py-2 border-blue-400 w-64 hover:text-blue-400  flex-1 min-w-fit">
+						<Link
+							to={`description/${props.data.id}`}
+							className="text-white text-center border-2 rounded-md px-8 py-2 border-blue-400 w-64 hover:text-blue-400  flex-1 min-w-fit"
+							onClick={() => {
+								setShowTooltip(false);
+								setActivePoint(null);
+							}}
+						>
 							Learn More
-						</button>
+						</Link>
 					</div>
 				</div>
 			)}
