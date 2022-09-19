@@ -1,5 +1,4 @@
 import { useAtom } from "jotai";
-import { useEffect } from "react";
 import {
 	ReactCompareSlider,
 	ReactCompareSliderImage,

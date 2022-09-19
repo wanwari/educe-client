@@ -5,10 +5,12 @@ import Map from "../components/Map";
 import { MapPanner } from "../components/MapControls";
 import Points from "../components/Points";
 import data from "../tmpData.json";
+import { useAtom } from "jotai";
+import { mapCenterState } from "../state/store";
 
 const MainPage = () => {
 	const [points, setPoints] = useState<PointArrayInterface>();
-	const [mapCenter, setMapCenter] = useState(latLng([0, 0]));
+	const [mapCenter, setMapCenter] = useAtom(mapCenterState); //useState(latLng([0, 0]));
 
 	useEffect(() => {
 		setPoints(data);
@@ -21,7 +23,7 @@ const MainPage = () => {
 		lat = lat / data.mapPoints.length;
 		long = long / data.mapPoints.length;
 		setMapCenter(latLng([lat, long]));
-	}, []);
+	}, [setMapCenter]);
 
 	return (
 		<div>

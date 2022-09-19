@@ -1,10 +1,10 @@
 import { useMap, useMapEvent } from "react-leaflet";
-import { LatLngExpression } from "leaflet";
+import { LatLng } from "leaflet";
 import { useAtom } from "jotai";
-import { showTooltipState } from "../state/store";
+import { mapCenterState, showTooltipState } from "../state/store";
 
 interface PannerProps {
-	center: LatLngExpression;
+	center: LatLng;
 	initial: boolean;
 }
 
@@ -18,9 +18,14 @@ export const MapPanner = (props: PannerProps) => {
 
 export const MapClicked = () => {
 	const [, setShowTooltip] = useAtom(showTooltipState);
+	const [mapCenter] = useAtom(mapCenterState);
 
 	useMapEvent("click", () => {
 		setShowTooltip(false);
 	});
+
+	const map = useMap();
+	map.flyTo(mapCenter, 13);
+
 	return null;
 };
