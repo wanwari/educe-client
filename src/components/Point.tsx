@@ -1,6 +1,6 @@
 import { Marker } from "react-leaflet";
 import { icon } from "leaflet";
-import point from "../img/b.png";
+import point from "../img/k.png";
 import { useAtom } from "jotai";
 import { activePointState, showTooltipState } from "../state/store";
 import { PointInterface } from "../Interfaces";
@@ -11,7 +11,7 @@ const Point = (props: { point: PointInterface }) => {
 
 	const customIcon = icon({
 		iconUrl: point,
-		iconSize: [35, 35],
+		iconSize: [20, 20],
 	});
 
 	return (
