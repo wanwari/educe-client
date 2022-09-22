@@ -51,7 +51,7 @@ const ToolTip = (props: { data: PointInterface }) => {
 					</div>
 					<div className="bg-zinc-700 rounded-b-lg p-4 text-lg flex align-middle justify-between">
 						{props.data.description && (
-							<p className="text-white text-sm grow-0 pr-4">
+							<p className="text-white text-sm grow-0 pr-4 hidden md:block">
 								{props.data.description}
 							</p>
 						)}
